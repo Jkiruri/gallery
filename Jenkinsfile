@@ -1,12 +1,12 @@
 pipeline {
     agent any
 
-    tools{ 
-   nodejs 'npm'
+    tools { 
+        node 'Node'
     }
     
     stages {
-        stage('clone repository') {
+        stage('Clone repository') {
             steps {
                 git 'https://github.com/Jkiruri/gallery'
             }
@@ -17,6 +17,5 @@ pipeline {
                 sh 'npm install'
             }
         }
-        
     }
 }

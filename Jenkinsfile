@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Set up') {
             steps {
-                git 'https://github.com/Jkiruri/gallery'
+                git url: 'https://github.com/Jkiruri/gallery'
             }
         }
         
@@ -18,9 +18,9 @@ pipeline {
         
         stage('Tests') {
             steps {
-                git branch: 'test', changelog: false, poll: false
+                git branch: 'test', url: 'https://github.com/Jkiruri/gallery', changelog: false, poll: false
                 sh 'npm test'
-                git branch: 'main', changelog: false, poll: false
+                git branch: 'main', url: 'https://github.com/Jkiruri/gallery', changelog: false, poll: false
             }
         }
         

@@ -2,9 +2,9 @@ pipeline {
     agent any
     
     stages {
-        stage('Set up') {
+        stage('clone repository') {
             steps {
-                git url: 'https://github.com/Jkiruri/gallery'
+                git : 'https://github.com/Jkiruri/gallery'
             }
         }
         

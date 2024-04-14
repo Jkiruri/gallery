@@ -2,8 +2,8 @@ pipeline {
     agent any
 
     tools{ 
-   nodejs 'Node'
-}
+   nodejs 'npm'
+    }
     
     stages {
         stage('clone repository') {

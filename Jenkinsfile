@@ -11,7 +11,7 @@ pipeline {
         stage('Basic Pipeline') {
             steps {
                 sh 'npm install'
-                sh 'node server'
+               
                 // Assuming deployment to Render is done using a specific command or script
             }
         }

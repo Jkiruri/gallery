@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('clone repository') {
             steps {
-                git : 'https://github.com/Jkiruri/gallery'
+                git 'https://github.com/Jkiruri/gallery'
             }
         }
         

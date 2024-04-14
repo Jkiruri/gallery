@@ -24,16 +24,6 @@ pipeline {
             }
         }
         
-        stage('Slack Integration') {
-            steps {
-                // Configure Slack integration
-                // Ensure Jenkins is configured to send notifications to Slack channel
-                // Send Slack message on successful deploy
-                // Include build ID and Render link in Slack message
-                // Make a change to the landing page
-                // Add "MILESTONE 4" to the landing page
-                // Push changes to trigger pipeline
-            }
-        }
+        
     }
 }

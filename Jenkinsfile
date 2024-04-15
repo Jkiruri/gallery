@@ -19,9 +19,11 @@ pipeline {
 
         stage('Tests') {
             steps {
+                sh 'npm install -g mocha'
                 sh 'npm test'
-            }
         }
+}
+
     }
 
     post {

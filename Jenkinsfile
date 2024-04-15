@@ -7,7 +7,7 @@ pipeline {
     stages {
         stage('Clone repository') {
             steps {
-                git 'https://github.com/Jkiruri/gallery'
+                git branch: 'master', url: 'https://github.com/Jkiruri/gallery'
             }
         }
 

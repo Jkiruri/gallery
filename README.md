@@ -1,2 +1,2 @@
 To install the project, run
-npm install
+npm install.

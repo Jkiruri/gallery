@@ -8,10 +8,14 @@ pipeline {
     stages {
         stage('Clone repository') {
             steps {
-                sh 'npm version'
+                git 'https://github.com/Jkiruri/gallery'
             }
         }
         
-        
+        stage('Build') {
+            steps {
+                sh 'npm install'
+            }
+        }
     }
 }

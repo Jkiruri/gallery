@@ -31,7 +31,7 @@ pipeline {
             script {
                 def buildId = env.BUILD_ID
                 def renderUrl = "https://gallery-5qqg.onrender.com/"
-                def slackMessage = "Build ID: ${buildId}\nDeployed to Render: ${renderUrl}\nMilestone 3 deployed!"
+                def slackMessage = "Build ID: ${buildId}\nDeployed to Render: ${renderUrl}\nMilestone 4 deployed!"
                 slackSend channel: '#james_ip1', message: slackMessage
             }
         }

@@ -8,7 +8,7 @@ pipeline {
     stages {
         stage('Clone repository') {
             steps {
-                git 'https://github.com/Jkiruri/gallery'
+                git branch: 'test', changelog: false, poll: false, url: 'https://github.com/Jkiruri/gallery'
             }
         }
         
@@ -20,9 +20,8 @@ pipeline {
         }
         stage('Tests') {
             steps {
-                git branch: 'test', changelog: false, poll: false
+                git branch: 'main', changelog: false, poll: false, url: 'https://github.com/Jkiruri/gallery'
                 sh 'npm test'
-                git branch: 'main', changelog: false, poll: false
             }
         }
     }

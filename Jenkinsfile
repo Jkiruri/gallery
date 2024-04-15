@@ -12,9 +12,17 @@ pipeline {
             }
         }
         
-        stage('Build') {
+        stage('Basic Pipeline') {
             steps {
                 sh 'npm install'
+                sh 'node server'
+            }
+        }
+        stage('Tests') {
+            steps {
+                git branch: 'test', changelog: false, poll: false
+                sh 'npm test'
+                git branch: 'main', changelog: false, poll: false
             }
         }
     }

@@ -27,7 +27,7 @@ pipeline {
 
     post {
         failure {
-            mail to: 'your-email@example.com', subject: 'Tests failed', body: 'The tests failed!'
+            mail to: 'jamesnjunge45@gmail.com', subject: 'Tests failed', body: 'The tests failed!'
         }
     }
 }

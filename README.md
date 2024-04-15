@@ -1,3 +1,6 @@
 To install the project, run
 npm install.
-To run test,
+To run the project run
+node server
+For tests run 
+npm test

@@ -27,6 +27,16 @@ pipeline {
     }
 
     post {
+        success {
+            script {
+                // Slack notification on successful deployment
+                def buildId = env.BUILD_ID
+                def renderUrl = "https://gallery-5qqg.onrender.com/"
+                def slackMessage = "Build ID: ${buildId}\nDeployed to Render: ${renderUrl}\nMilestone 3 deployed!"
+                slackSend channel: '#james_ip1', message: slackMessage
+            }
+        }
+
         failure {
             mail to: 'jamesnjunge45@gmail.com', subject: 'Tests failed', body: 'The tests failed!'
         }

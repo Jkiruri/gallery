@@ -14,7 +14,6 @@ pipeline {
         stage('Basic Pipeline') {
             steps {
                 sh 'npm install'
-                sh 'node server'
             }
         }
 

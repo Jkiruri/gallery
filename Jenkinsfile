@@ -2,20 +2,16 @@ pipeline {
     agent any
 
     tools { 
-        nodejs 'npm'
+        nodejs '21.7.3'
     }
     
     stages {
         stage('Clone repository') {
             steps {
-                git 'https://github.com/Jkiruri/gallery'
+                sh 'npm version'
             }
         }
         
-        stage('Build') {
-            steps {
-                sh 'npm install'
-            }
-        }
+        
     }
 }
